@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DescriptionActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/nameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Дуга"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/colorTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Венге"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12 шт."
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/earnTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="+300р."
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Добавлено"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/addedTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="08.02.2022 в 10:50"
+            android:textSize="34sp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
