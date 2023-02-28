@@ -42,14 +42,6 @@ class MainActivity : AppCompatActivity(), CurrentAdapter.Listener {
                 startActivity(intent)
             }
 
-//        editLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()){
-////            if (it.resultCode == RESULT_OK) {
-////
-////            }
-//            adapter.addItem(it.data?.getSerializableExtra("popka") as Plant)
-//            Toast.makeText(this@MainActivity, "popka", Toast.LENGTH_SHORT).show()
-//        }
-
         var sss = intent.getSerializableExtra("str") as Plant?
         if (sss != null) {
             adapter.addItem(sss)
