@@ -8,7 +8,7 @@ import com.example.workingapplication.databinding.DesignBinding
 
 class ItemAdapter (val listener: Listener): RecyclerView.Adapter<ItemAdapter.ViewHolder>() {
 
-        val plantList = ArrayList<Plant>()
+        var plantList = ArrayList<Plant>()
 
         class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
             val binding = DesignBinding.bind(itemView)

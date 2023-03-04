@@ -7,6 +7,8 @@ import android.util.Log
 import android.widget.Toast
 import com.example.workingapplication.databinding.ActivityContentBinding
 import com.example.workingapplication.databinding.ActivityMainBinding
+import com.google.gson.Gson
+import com.google.gson.reflect.TypeToken
 
 class ContentActivity : AppCompatActivity(), CurrentAdapter.Listener {
 
@@ -18,54 +20,37 @@ class ContentActivity : AppCompatActivity(), CurrentAdapter.Listener {
         binding = ActivityContentBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        val v = SharedPref.getValue(this)
+
         Log.d(TAG, "MyApp onCreate()")
 
-        val item = intent.getSerializableExtra("item") as Plant
+        var item = intent.getSerializableExtra("item") as Plant
+        val s = SharedPref.setValue(this, item)
 
         binding.apply {
             tvTitle.text = "Название: ${item.title}"
             tvContent.text = "Цена: ${item.price}"
         }
 
+
+
         binding.floatingActionButton3.setOnClickListener {
             startActivity(Intent(this, MainActivity::class.java).apply {
                 putExtra("str", item)
+                finish()
             })
         }
+
+
+
     }
+
+
+
+
 
     override fun onClick(plant: Plant) {
         TODO("Not yet implemented")
-    }
-
-    override fun onPause() {
-        Log.d(TAG, "MyApp onPause()")
-        super.onPause()
-    }
-
-    override fun onResume() {
-        Log.d(TAG, "MyApp onResume()")
-        super.onResume()
-    }
-
-    override fun onStop() {
-        Log.d(TAG, "MyApp onStop()")
-        super.onStop()
-    }
-
-    override fun onStart() {
-        Log.d(TAG, "MyApp onStart()")
-        super.onStart()
-    }
-
-    override fun onRestart() {
-        Log.d(TAG, "MyApp onRestart()")
-        super.onRestart()
-    }
-
-    override fun onDestroy() {
-        Log.d(TAG, "MyApp onDestroy()")
-        super.onDestroy()
     }
 
 }
